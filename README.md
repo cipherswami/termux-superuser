@@ -1,5 +1,5 @@
 # Termux Superuser
-Runs Android su with all Termux binaries included in superuser mode (implies: we will be able to run binaries nano in su)  
+Runs Android su with all Termux binaries included, in superuser mode. Which implies you can run binaries like nano vim in su mode. 
 [Rooted Andriod] 
 
 # Motive
