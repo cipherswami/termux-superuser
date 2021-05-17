@@ -1,11 +1,20 @@
 #!/bin/bash
 
-echo " "
-echo "Termux Superuser by name-is-cipher"
-echo " "
-echo " "
+
+function print_banner() {
+    clear
+    printf "${blue}#####################################\n"
+    printf "${blue}##                                 ##\n"
+    printf "${blue}##        Termux Superuser         ##\n"
+    printf "${blue}##                                 ##\n"
+    printf "${blue}########### name-is-cipher ##########${reset}\n\n"
+}
+
+print_banner
 
 # Appending path in bashrc
+echo " " >> $HOME/.bashrc
+echo "# This PATH is for Termux superuser bin folder" $HOME/.bashrc
 echo "export PATH=$PATH:/data/data/com.termux/files/home/.termux/bin" >> $HOME/.bashrc
 mkdir $HOME/.termux/bin
 
@@ -40,13 +49,13 @@ echo "# Twitter: name_is_cipher" >> $HOME/.termux/bin/xsu
 echo "# Mail: aravindswami135@gmail.com" >> $HOME/.termux/bin/xsu
 chmod +x $HOME/.termux/bin/xsu
 
-echo "Installing Termux superuser"
+echo "Installing Termux superuser ..."
 echo " "
 progress
 echo " "
 echo "Installation successful !!!"
 echo " "
-echo "> Run 'xsu' any whare to start Termux Superuser ..."
+echo "> Run 'xsu' anywhere to start Termux Superuser."
 echo " "
 echo " [*] Termux needs to be restarted to work properly, Please restart"
 echo " "
