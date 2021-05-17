@@ -20,7 +20,7 @@ And update once again:
 # Setup Instructions
 1. Git this repo to HOME directory of Termux: `$ git clone https://github.com/name-is-cipher/termux-superuser $HOME/termux-superuser`
 2. change the directory into termux-superuser folder: `$ cd $HOME/termux-superuser`
-3. Make "install.sh" executable: `$ chmod +x $HOME/install.sh`
+3. Make "install.sh" executable: `$ chmod +x $HOME/termux-superuser/install.sh`
 4. Then finally run the installer to install: `$ ./install.sh`
 5. et voilà, installation is finshed !!!
 6. Run 'xsu' any where to start Termux Superuser.
