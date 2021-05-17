@@ -22,7 +22,7 @@ And update once again:
 2. Make "install.sh" executable: `$ chmod +x ~/termux-superuser/install.sh`
 3. Then finally run the installer to install: `$ ~/termux-superuser/install.sh`
 4. et voilà, installation is finshed !!!  
-[now, you cna delete the installation folder: `rm -rf ~/termux-superuser`] 
+[now, you can delete the installation folder: `rm -rf ~/termux-superuser`] 
 5. Run 'xsu' any where to start Termux Superuser.
 
 # Additinol info
