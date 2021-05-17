@@ -1,22 +1,15 @@
 #!/bin/bash
 
+echo " "
 echo "Termux Superuser by name-is-cipher"
 echo " "
 echo " "
 
 # Appending path in bashrc
-# echo "export PATH=$PATH:/data/data/com.termux/files/home/.termux/bin" >> $HOME/.bashrc
+echo "export PATH=$PATH:/data/data/com.termux/files/home/.termux/bin" >> $HOME/.bashrc
 mkdir $HOME/.termux/bin
 
-function progress {
-    bar=''
-    for (( x=0; x <= 100; x++ )); do
-        sleep 0.03
-        bar="${bar}="
-        echo -ne "$bar ${x}%\r"
-    done
-    echo -e "\n"
-}
+$HOME/termux-superuser
 
 # Making xsu
 echo "# This file starts termux in su with all termux binaries enabled" >> $HOME/.termux/bin/xsu
@@ -36,7 +29,7 @@ echo "Installation successful !!!"
 echo " "
 echo "> Run 'xsu' any whare to start Termux Superuser ..."
 echo " "
-echo " [*] Termux needs to be restarted to work properly, Press any key to restart"
+echo " [*] Termux needs to be restarted to work properly, Please restart"
 echo " "
 read 
 exit
