@@ -10,6 +10,7 @@ Termux super user directly uses termux's binaries with Andriod su, avoiding redu
 1. Update Termux to latest version:-
   - `$ apt clean`
   - `$ apt update -y`  
+  - `$ apt upgrade -y`
 And update once again:
   - `$ apt update -y`
   - `$ apt upgrade -y`
