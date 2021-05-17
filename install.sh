@@ -57,7 +57,8 @@ echo "Installation successful !!!"
 echo " "
 echo "> Run 'xsu' anywhere to start Termux Superuser."
 echo " "
-echo " [*] Termux needs to be restarted to work properly, Please restart"
+echo " [*] Termux needs to be restarted to work properly,"
+echo "     Please restart !"
 echo " "
 read 
 exit
