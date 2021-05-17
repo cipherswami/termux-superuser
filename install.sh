@@ -14,7 +14,7 @@ print_banner
 
 # Appending path in bashrc
 echo " " >> $HOME/.bashrc
-echo "# This PATH is for Termux superuser bin folder" $HOME/.bashrc
+echo "# This PATH is for Termux superuser bin folder" >> $HOME/.bashrc
 echo "export PATH=$PATH:/data/data/com.termux/files/home/.termux/bin" >> $HOME/.bashrc
 mkdir $HOME/.termux/bin
 
