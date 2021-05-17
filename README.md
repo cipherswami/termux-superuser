@@ -1,5 +1,5 @@
 # Termux Superuser
-Runs Android su with all Termux binaries included, in superuser mode. Which implies you can run binaries like nano vim in su mode. 
+Runs Android su with all Termux binaries included, in superuser mode. Which implies you can run binaries like nano, vim in su mode. 
 [Rooted Andriod] 
 
 # Motive
@@ -9,8 +9,10 @@ Termux super user directly uses termux's binaries with Andriod su, avoiding redu
 # Pre-Requisites
 1. Update Termux to latest version:-
   - `$ apt clean`
-  - `$ apt update -y` [if you see errors don't worry, just keep going]  
-  - `$ apt upgrade -y`  [if you get prompts, hit "y"]  
+  - `$ apt update -y`   
+   [if you see errors don't worry, just keep going]  
+  - `$ apt upgrade -y`    
+   [if you get prompts, hit "y"]  
 And update once again:
   - `$ apt update -y`
   - `$ apt upgrade -y`
@@ -18,7 +20,8 @@ And update once again:
 3. Finally Restart Termux to get into updated termux: `$ exit` 
 
 # Setup Instructions
-1. Git this repo to HOME directory of Termux: `$ git clone https://github.com/name-is-cipher/termux-superuser ~/termux-superuser`
+1. Git this repo to HOME directory of Termux:  
+   `$ git clone https://github.com/name-is-cipher/termux-superuser ~/termux-superuser`
 2. Make "install.sh" executable: `$ chmod +x ~/termux-superuser/install.sh`
 3. Then finally run the installer to install: `$ ~/termux-superuser/install.sh`
 4. et voilà, installation is finshed !!!  
