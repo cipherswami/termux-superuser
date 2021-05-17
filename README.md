@@ -8,19 +8,19 @@ Termux super user directly uses termux's binaries with Andriod su, avoiding redu
 
 # Pre-Requisites
 1. Update Termux to latest version:-
-  - ` apt clean`
-  - ` apt update -y` [if you see errors don't worry, just keep going]  
-  - ` apt upgrade -y`  [if you get prompts, hit "y"]  
+  - `$ apt clean`
+  - `$ apt update -y` [if you see errors don't worry, just keep going]  
+  - `$ apt upgrade -y`  [if you get prompts, hit "y"]  
 And update once again:
-  - ` apt update -y`
-  - ` apt upgrade -y`
-2. Then install git in Termux: ` pkg install git -y`
+  - `$ apt update -y`
+  - `$ apt upgrade -y`
+2. Then install git in Termux: `$ pkg install git -y`
 3. Finally Restart Termux to get into updated termux: `$ exit` 
 
 # Setup Instructions
-1. Git this repo to HOME directory of Termux: ` git clone https://github.com/name-is-cipher/termux-superuser $HOME/termux-superuser`
-2. Make "install.sh" executable: ` chmod +x $HOME/termux-superuser/install.sh`
-3. Then finally run the installer to install: ` $HOME/termux-superuser/install.sh`
+1. Git this repo to HOME directory of Termux: `$ git clone https://github.com/name-is-cipher/termux-superuser ~/termux-superuser`
+2. Make "install.sh" executable: `$ chmod +x ~/termux-superuser/install.sh`
+3. Then finally run the installer to install: `$ ~/termux-superuser/install.sh`
 4. et voilà, installation is finshed !!!
 5. Run 'xsu' any where to start Termux Superuser.
 
