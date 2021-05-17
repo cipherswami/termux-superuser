@@ -9,7 +9,26 @@ echo " "
 echo "export PATH=$PATH:/data/data/com.termux/files/home/.termux/bin" >> $HOME/.bashrc
 mkdir $HOME/.termux/bin
 
-$HOME/termux-superuser
+function progress {
+BAR='##############################'
+FILL='------------------------------'
+totalstrokes=100  # num. lines in file
+barLen=30
+
+# --- iterate over lines in csv file ---
+count=0
+while [[ $count -lt $totalstrokes ]]; do
+
+    # update progress bar
+    sleep 0.08
+    count=$(($count + 1))
+    percent=$((($count * 100 / $totalstrokes * 100) / 100))
+    i=$(($percent * $barLen / 100))
+    echo -ne "\r[${BAR:0:$i}${FILL:$i:barLen}] $count/$totalstrokes ($percent%)"
+
+done
+echo " "
+}
 
 # Making xsu
 echo "# This file starts termux in su with all termux binaries enabled" >> $HOME/.termux/bin/xsu
