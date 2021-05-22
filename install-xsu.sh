@@ -1,5 +1,5 @@
-#! $0
-
+# This is Termux supreruser installer,
+# you can delete this file safly after installation.
 
 function banner_termux-superuser() {
 
