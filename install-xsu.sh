@@ -1,5 +1,5 @@
 # This is Termux supreruser installer,
-# you can delete this file safly after installation.
+# you can delete this file safely after installation.
 
 function banner_termux-superuser() {
 
@@ -57,6 +57,14 @@ function check_tbin() {
 
 }
 
+function clean_cipherus() {
+
+    if [ -f cipherus-libraries.sh ]; then
+        rm cipherus-libraries.sh
+        rm ~/.wget-hsts
+    fi
+}
+
 function ibar {
 
     FILE=$1
@@ -99,8 +107,9 @@ function ibar {
 
 function install_termux-superuser() {
 
-    echo "Installing Termux superuser ..."
+    echo " [*] Installing Termux superuser ..."
     echo " "
+
     # Making xsu
     echo "#! /data/data/com.termux/files/usr/bin/bash" >> ~/.termux/bin/xsu
     echo "# This file starts termux in su with all termux binaries enabled" >> ~/.termux/bin/xsu
@@ -110,14 +119,16 @@ function install_termux-superuser() {
     echo "xsu_env=\$xsu_env:/data/data/com.termux/files/usr/bin/applets" >> ~/.termux/bin/xsu
     echo "xsu_env=\$xsu_env:/data/data/com.termux/files/home/.termux/bin" >> ~/.termux/bin/xsu
     echo "export PATH=\$xsu_env; exec su'" >> ~/.termux/bin/xsu
-    echo " " >> ~/.termux/bin/xsu
+    echo >> ~/.termux/bin/xsu
     echo "# Author: Aravind Swami [github: name-is-cipher]" >> ~/.termux/bin/xsu
     echo "# Twitter: name_is_cipher" >> ~/.termux/bin/xsu
     echo "# Mail: aravindswami135@gmail.com" >> ~/.termux/bin/xsu
+
     chmod +x ~/.termux/bin/xsu
     ibar ~/.termux/bin/xsu 12
+
     echo " "
-    echo "Installation successful !!!"
+    echo " [*] Installation successful !!!"
     echo " "
     echo "> Run 'xsu' anywhere to start Termux Superuser."
     echo " "
