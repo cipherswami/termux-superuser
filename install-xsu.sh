@@ -12,10 +12,11 @@ function banner_termux-superuser() {
     printf "    ${blue}##                            ##\n"
     printf "    ${blue}##     Termux Superuser       ##\n"
     printf "    ${blue}##                            ##\n"
-    printf "    ${blue}||||||  ${light_cyan}name-is-cipher  ${blue}||||||||\n\n"
-            echo "----------------------------------------------"
+    printf "    ${blue}################################\n"
+    printf "    ${blue}|||||||  ${light_cyan}name-is-cipher  ${blue}|||||||\n"
+    printf "    ${blue}--------------------------------${reset}"
     echo "  "
-    echo "  "${light_cyan} ${blue}
+    echo "  "
 }
 
 function check_update() {
@@ -101,7 +102,7 @@ function install_termux-superuser() {
     echo "Installing Termux superuser ..."
     echo " "
     # Making xsu
-    echo "#! /data/data/com.termux/files/bin/bash" >> ~/.termux/bin/xsu
+    echo "#! /data/data/com.termux/files/usr/bin/bash" >> ~/.termux/bin/xsu
     echo "# This file starts termux in su with all termux binaries enabled" >> ~/.termux/bin/xsu
     echo >> ~/.termux/bin/xsu
     echo "su -c '" >> ~/.termux/bin/xsu
