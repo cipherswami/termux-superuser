@@ -8,14 +8,14 @@ function banner_termux-superuser() {
     reset='\033[0m'
 
     clear
-    printf "    ${blue}#####################################\n"
-    printf "    ${blue}##                                 ##\n"
-    printf "    ${blue}##        Termux Superuser         ##\n"
-    printf "    ${blue}##                                 ##\n"
-    printf "    ${blue}||||||||||  ${light_cyan}name-is-cipher  ${blue}||||||||||\n"
+    printf "    ${blue}################################\n"
+    printf "    ${blue}##                            ##\n"
+    printf "    ${blue}##     Termux Superuser       ##\n"
+    printf "    ${blue}##                            ##\n"
+    printf "    ${blue}||||||  ${light_cyan}name-is-cipher  ${blue}||||||||\n\n"
             echo "----------------------------------------------"
     echo "  "
-    echo "  "
+    echo "  "${light_cyan} ${blue}
 }
 
 function check_update() {
@@ -101,19 +101,20 @@ function install_termux-superuser() {
     echo "Installing Termux superuser ..."
     echo " "
     # Making xsu
+    echo "#! /data/data/com.termux/files/bin/bash" >> ~/.termux/bin/xsu
     echo "# This file starts termux in su with all termux binaries enabled" >> ~/.termux/bin/xsu
-    echo " " >> ~/.termux/bin/xsu
+    echo >> ~/.termux/bin/xsu
     echo "su -c '" >> ~/.termux/bin/xsu
     echo "xsu_env=\$PATH:/data/data/com.termux/files/usr/bin" >> ~/.termux/bin/xsu
     echo "xsu_env=\$xsu_env:/data/data/com.termux/files/usr/bin/applets" >> ~/.termux/bin/xsu
-    echo "xsu_env=\$xsu_envu:/data/data/com.termux/files/home/.termux/bin" >> ~/.termux/bin/xsu
+    echo "xsu_env=\$xsu_env:/data/data/com.termux/files/home/.termux/bin" >> ~/.termux/bin/xsu
     echo "export PATH=\$xsu_env; exec su'" >> ~/.termux/bin/xsu
     echo " " >> ~/.termux/bin/xsu
     echo "# Author: Aravind Swami [github: name-is-cipher]" >> ~/.termux/bin/xsu
     echo "# Twitter: name_is_cipher" >> ~/.termux/bin/xsu
     echo "# Mail: aravindswami135@gmail.com" >> ~/.termux/bin/xsu
     chmod +x ~/.termux/bin/xsu
-    ibar ~/.termux/bin/xsu 11
+    ibar ~/.termux/bin/xsu 12
     echo " "
     echo "Installation successful !!!"
     echo " "
