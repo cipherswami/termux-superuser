@@ -27,7 +27,7 @@ Termux super user directly uses termux's binaries with Andriod su, avoiding redu
 8. **USAGE**: Run 'xsu' any where in termux to start kali chroot.
 
 # Additinol info
-- This intallation creates a "bin" folder in $HOME/.termux which is being added to PATH variable i.e, you can place any binaries (or) executables in that folder that can be called from any where in termux.
+- This intallation creates a "bin" folder in $HOME/.termux foldder, which is being added to PATH variable i.e, you can place any binaries (or) executables in that folder that can be called from any where in termux.
 
 # Creator
 > **Author**: [name_is_cipher](https://github.com/name-is-cipher)  
