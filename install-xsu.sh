@@ -29,7 +29,7 @@ if [ ! -d ~/.termux ]; then
     sleep 4
     apt update
     clear
-    echo " [!] if 'y/n' prompted any, hit -> y"
+    echo " [!] if prompted any, hit -> y"
     sleep 5
     apt upgrade -y
     apt install wget -y
