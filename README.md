@@ -15,11 +15,11 @@ Termux super user directly uses termux's binaries with Andriod su, avoiding redu
 4. If prompeted for superuser access to termux at any point, grant it.
 
 # Setup Instructions
-1. Git clone this repo to your HOME directory of Termux, and inside find installer "install_boot-kali.sh":   
+1. Git clone this repo to your HOME directory of Termux, and inside find the installer "install_xsu.sh":   
    `$ git clone https://github.com/name-is-cipher/termux-superuser.git`    
                         (OR)  
    Directly download installer from releases:    
-   `$ wget https://github.com/name-is-cipher/boot-nethunter/releases/download/v1.0/install_boot-kali.sh`  
+   `$ wget https://github.com/name-is-cipher/termux-superuser/releases/download/v1.0/install-xsu.sh`  
 4. Then make 'install_xsu.sh' executable: `$ chmod +x install_xsu.sh`
 5. Now just run: `$ ./install_xsu.sh`
 6. et voilà, your installation is finshed !!!
