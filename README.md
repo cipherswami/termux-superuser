@@ -7,28 +7,27 @@ Andriod su has few important binaries missing out of the box like "nano". And if
 Termux super user directly uses termux's binaries with Andriod su, avoiding redundancy of binaries in both environment.
 
 # Pre-Requisites
-1. Update Termux to latest version:-
-  - `$ apt clean`
-  - `$ apt update -y` [if you see errors don't worry, just keep going]  
-  - `$ apt upgrade -y` [if you get prompts, hit "y"]  
-And update once again:
-  - `$ apt update -y`
-  - `$ apt upgrade -y`
-2. Then install git in Termux: `$ pkg install git -y`
-3. Finally Restart Termux to get into updated termux: `$ exit` 
+1. Update Termux to latest Version:
+    - `$ apt update`
+    - `$ apt uprade -y`
+2. Install git: `$ pkg install git`
+3. Restart the Termux.
+4. If prompeted for superuser access to termux at any point, grant it.
 
 # Setup Instructions
-1. Git this repo to HOME directory of Termux:  
-   `$ git clone https://github.com/name-is-cipher/termux-superuser ~/termux-superuser`
-2. Make "install.sh" executable: `$ chmod +x ~/termux-superuser/install.sh`
-3. Then finally run the installer to install: `$ ~/termux-superuser/install.sh`
-4. et voilà, installation is finshed !!!  
-[now, you can delete the installation folder: `rm -rf ~/termux-superuser`] 
-5. Run 'xsu' any where to start Termux Superuser.
+1. Git clone this repo to your HOME directory of Termux, and inside find installer "install_boot-kali.sh":   
+   `$ git clone https://github.com/name-is-cipher/termux-superuser.git`    
+                        (OR)  
+   Directly download installer from releases:    
+   `$ wget https://github.com/name-is-cipher/boot-nethunter/releases/download/v1.0/install_boot-kali.sh`  
+4. Then make 'install_xsu.sh' executable: `$ chmod +x install_xsu.sh`
+5. Now just run: `$ ./install_xsu.sh`
+6. et voilà, your installation is finshed !!!
+7. Now you can safely remove the installer folder from HOME directory if cloned: `rm -rf termux-superuser`
+8. **USAGE**: Run 'xsu' any where in termux to start kali chroot.
 
 # Additinol info
-- This intallation creates a execuatable "bin" folder in $HOME/.termux folder, you can place your any personal binaries or executables in that folder.
-- Unfortunatly aliases can't be exported to termux superuser, but my turnaround solution is make executable file in the name of your alias and past the command inside that file and finally place this executable file in $HOME/bin, by this way aliases can be executed in both the environments.
+- This intallation creates a "bin" folder in $HOME/.termux which is being added to PATH variable i.e, you can place any binaries (or) executables in that folder that can be called from any where in termux.
 
 # Creator
 > **Author**: [name_is_cipher](https://github.com/name-is-cipher)  
