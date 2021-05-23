@@ -1,3 +1,5 @@
+#! /data/data/com.termux/files/usr/bin/bash
+
 # This is Termux supreruser installer,
 # you can delete this file safely after installation.
 
@@ -46,7 +48,7 @@ fi
 function check_tbin() {
 
     if [ ! -d ~/.termux/bin ]; then
-        
+
         mkdir ~/.termux/bin
         echo " " >> ~/.bashrc
         echo "# This PATH is for Termux superuser bin folder" >> ~/.bashrc
@@ -135,7 +137,7 @@ function install_termux-superuser() {
     echo " [*] Termux needs to be restarted to work properly,"
     echo "     Please restart !"
     echo " "
-    read 
+    read
     exit
 
 }
