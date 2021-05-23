@@ -9,7 +9,7 @@ Termux super user directly uses termux's binaries with Andriod su, avoiding redu
 # Pre-Requisites
 1. Update Termux to latest Version:
     - `$ apt update`
-    - `$ apt uprade -y`
+    - `$ apt upgrade -y`
 2. Install git: `$ pkg install git`
 3. Restart the Termux.
 4. If prompeted for superuser access to termux at any point, grant it.
