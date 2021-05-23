@@ -21,7 +21,7 @@ Termux super user directly uses termux's binaries with Andriod su, avoiding redu
 5. Now just install by running: `$ ./install_xsu.sh`
 6. et voilà, your installation is finshed !!!
 7.Now you can safely get rid of the installer : `$ rm install-xsu.sh`
-8. **USAGE**: Run 'xsu' any where in termux to start kali chroot.
+8. **USAGE**: Run 'xsu' any where in termux to start termux superuser.
 
 # Additinol info
 - This intallation creates a "bin" folder in $HOME/.termux direcotry, which is being added to PATH variable i.e, you can place any binaries (or) executables in that folder that can be called from any where in termux.
