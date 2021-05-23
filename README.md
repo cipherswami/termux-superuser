@@ -15,19 +15,16 @@ Termux super user directly uses termux's binaries with Andriod su, avoiding redu
 4. If prompeted for superuser access to termux at any point, grant it.
 
 # Setup Instructions
-1. Git clone this repo to your HOME directory of Termux, and inside find the installer "install_xsu.sh":   
-   `$ git clone https://github.com/name-is-cipher/termux-superuser.git`    
-                        (OR)  
-   Directly download installer from releases:    
+1. Directly download installer(install-xsu.sh) from releases:    
    `$ wget https://github.com/name-is-cipher/termux-superuser/releases/download/v1.0/install-xsu.sh`  
-4. Then make 'install_xsu.sh' executable: `$ chmod +x install_xsu.sh`
-5. Now just run: `$ ./install_xsu.sh`
+4. Then make the installer executable: `$ chmod +x install_xsu.sh`
+5. Now just install by running: `$ ./install_xsu.sh`
 6. et voilà, your installation is finshed !!!
-7. Now you can safely remove the installer folder from HOME directory if cloned: `rm -rf termux-superuser`
+7.Now you can safely get rid of the installer : `$ rm install-xsu.sh`
 8. **USAGE**: Run 'xsu' any where in termux to start kali chroot.
 
 # Additinol info
-- This intallation creates a "bin" folder in $HOME/.termux foldder, which is being added to PATH variable i.e, you can place any binaries (or) executables in that folder that can be called from any where in termux.
+- This intallation creates a "bin" folder in $HOME/.termux direcotry, which is being added to PATH variable i.e, you can place any binaries (or) executables in that folder that can be called from any where in termux.
 
 # Creator
 > **Author**: [name_is_cipher](https://github.com/name-is-cipher)  
