@@ -50,9 +50,9 @@ function check_tbin() {
     if [ ! -d ~/.termux/bin ]; then
 
         mkdir ~/.termux/bin
-        echo " " >> ~/.bashrc
+        echo >> ~/.bashrc
         echo "# This PATH is for Termux superuser bin folder" >> ~/.bashrc
-        echo " " >> ~/.bashrc
+        echo >> ~/.bashrc
         echo "export PATH=\$PATH:/data/data/com.termux/files/home/.termux/bin" >> ~/.bashrc
 
     fi
