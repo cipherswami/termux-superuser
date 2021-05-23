@@ -113,7 +113,7 @@ function install_termux-superuser() {
     echo " "
 
     # Making xsu
-    echo "#! /data/data/com.termux/files/usr/bin/bash" >> ~/.termux/bin/xsu
+    echo "#! /data/data/com.termux/files/usr/bin/bash" > ~/.termux/bin/xsu
     echo "# This file starts termux in su with all termux binaries enabled" >> ~/.termux/bin/xsu
     echo >> ~/.termux/bin/xsu
     echo "su -c '" >> ~/.termux/bin/xsu
