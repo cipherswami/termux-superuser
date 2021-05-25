@@ -20,7 +20,7 @@ Termux super user directly uses termux's binaries with Andriod su, avoiding redu
 # Setup Instructions
 1. Directly download installer(install-xsu.sh) from releases:    
    `$ wget https://github.com/name-is-cipher/termux-superuser/releases/download/v1.0/install_xsu.sh`   
-2. Then make the installer executable: `$ chmod +x install_xsu.sh`
+2. Then make the installer executable if it is not: `$ chmod +x install_xsu.sh`
 3. Now install termux superuser: `$ ./install_xsu.sh`
 4. et voilà, your installation is finshed !!!  
 5. Now you can safely get rid of the installer : `$ rm install_xsu.sh`
