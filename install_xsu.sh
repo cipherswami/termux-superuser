@@ -21,29 +21,7 @@ function banner_termux-superuser() {
     echo "  "
 }
 
-function check_update() {
-if [ ! -d ~/.termux ]; then
 
-    clear
-    echo " "
-    echo " [!] Your are on older version of Termux !!!"
-    echo "     Updating Termux...."
-    sleep 4
-    apt update
-    clear
-    echo " [!] if prompted any, hit -> y"
-    sleep 5
-    apt upgrade -y
-    apt install wget -y
-    clear
-    echo " "
-    echo " [*] You need to completly restart the termux, "
-    echo "     And start the installation again !!!"
-    echo " "
-    exit;
-fi
-
-}
 
 function check_tbin() {
 
@@ -111,21 +89,7 @@ function install_termux-superuser() {
 
     echo " [*] Installing Termux superuser ..."
     echo " "
-
-    # Making xsu
-    echo "#! /data/data/com.termux/files/usr/bin/bash" > ~/.termux/bin/xsu
-    echo "# This file starts termux in su with all termux binaries enabled" >> ~/.termux/bin/xsu
-    echo >> ~/.termux/bin/xsu
-    echo "su -c '" >> ~/.termux/bin/xsu
-    echo "xsu_env=\$PATH:/data/data/com.termux/files/usr/bin" >> ~/.termux/bin/xsu
-    echo "xsu_env=\$xsu_env:/data/data/com.termux/files/usr/bin/applets" >> ~/.termux/bin/xsu
-    echo "xsu_env=\$xsu_env:/data/data/com.termux/files/home/.termux/bin" >> ~/.termux/bin/xsu
-    echo "export PATH=\$xsu_env; exec su'" >> ~/.termux/bin/xsu
-    echo >> ~/.termux/bin/xsu
-    echo "# Author: Aravind Swami [github: name-is-cipher]" >> ~/.termux/bin/xsu
-    echo "# Twitter: name_is_cipher" >> ~/.termux/bin/xsu
-    echo "# Mail: aravindswami135@gmail.com" >> ~/.termux/bin/xsu
-
+    
     chmod +x ~/.termux/bin/xsu
     ibar ~/.termux/bin/xsu 12
 
