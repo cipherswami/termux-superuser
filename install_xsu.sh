@@ -65,6 +65,8 @@ check_tbin
 
 install_termux-superuser
 
+clean_cipherus
+
 echo " [*] Termux needs to be restarted to work properly,"
 echo "     Please restart !"
 echo " "
