@@ -23,7 +23,7 @@ fi
 clear
 
 ## Pre variable initiations ##
-Dev=1
+Dev=0
 
 if [[ Dev == 0 ]]; then
     export BRANCH=main
