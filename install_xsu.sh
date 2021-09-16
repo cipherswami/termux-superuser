@@ -61,6 +61,14 @@ function banner_termux-superuser() {
 
 banner_termux-superuser
 
+apt-Update
+
+echo " "
+echo " Press ENTER to continue ..."
+read
+
+banner_termux-superuser
+
 check_tbin
 
 install_termux-superuser
