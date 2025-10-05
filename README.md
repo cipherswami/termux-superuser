@@ -1,36 +1,80 @@
 # Termux Superuser
 
-Runs Android su with all Termux binaries included, in superuser mode. Which implies you can run binaries like nano, vim in su mode. 
-[Rooted Andriod ONLY]   
-**NOTE:**  
- -> This not same as tsu apt package.
- - tsu's interpreter: /data/data/com.termux/files/usr/bin/bash = which is same as termux interpreter.
- - xsu's interpreter: /system/bin/sh = the root binary interpreter.  
+Runs Android `su` with all **Termux binaries** included in **superuser mode** — which means you can run commands like `nano`, directly as system root.
 
-# Motive
+> 🧩 **Rooted Android ONLY**
 
-Andriod su has few important binaries missing out of the box like "nano". And if you try to add it, it is not persistent (after every boot you are back to square 1).
-Termux super user directly uses termux's binaries with Andriod su, avoiding redundancy of binaries in both environment.
+### Important Notice:
 
-# Pre-Requisites
+Hey everyone,
 
-1. Update Termux to latest Version:
-    - `$ apt update`
-    - `$ apt upgrade -y`
-2. Install git: `$ pkg install git`
-3. Restart the Termux.
-4. If prompeted for superuser access to termux at any point, grant it.
+I originally created this repo when I was quite young, mainly for my own convenience. But since so many of you are now using it (which is awesome!), I’m restructuring and cleaning things up properly to make it more consistent and reliable.
 
-# Setup Instructions
+For anyone who has **old forks**, please **discard old commits** when syncing — the old code is preserved in **`v1.0.0`**, but all new work will be structured differently going forward.
 
-1. Directly download installer(install-xsu.sh) from releases:    
-   `$ wget https://github.com/cipherswami/termux-superuser/releases/download/v1.0/install_xsu.sh`   
-2. Then make the installer executable if it is not: `$ chmod +x install_xsu.sh`
-3. Now install termux superuser: `$ ./install_xsu.sh`
-4. et voilà, your installation is finshed !!!  
-5. Now you can safely get rid of the installer : `$ rm install_xsu.sh`
-6. **USAGE**: Run 'xsu' any where in termux to start termux superuser.
+Thanks for your understanding and continued support ❤️
 
-# Additinol info
+## Motive
 
-- This intallation creates a "bin" folder in $HOME/.termux direcotry, which is being added to PATH variable i.e, you can place any binaries (or) executables in that folder that can be called from any where in termux.
+Android’s built-in `su` environment is missing a few key binaries (like `nano`), and adding them manually isn’t persistent — every reboot resets things.
+
+**Termux Superuser** bridges that gap: it runs Android `su` while using Termux’s own binaries, so you get full root access without redundant installs.
+
+## Pre-Requisites
+
+1. Update Termux to the latest version:
+
+   ```bash
+   apt update && apt upgrade -y
+   ```
+
+2. Install Git:
+
+   ```bash
+   pkg install git
+   ```
+
+3. Restart Termux. If prompted for superuser access any time, **grant it**.
+
+## Instructions
+
+1. Download the installer:
+
+   ```bash
+   wget https://github.com/cipherswami/termux-superuser/releases/download/v1.0/install_xsu.sh
+   ```
+
+2. Make it executable:
+
+   ```bash
+   chmod +x install-xsu.sh
+   ```
+
+3. Run the installer:
+
+   ```bash
+   ./install-xsu.sh
+   ```
+
+4. **et voilà!** Installation complete 🎉. Now, clean up:
+
+   ```bash
+   rm install-xsu.sh
+   ```
+
+## Usage
+
+Run `xsu` anywhere in Termux to start Termux Superuser.
+
+## Additional Info
+
+- Installation creates a `bin` folder in `$HOME/.termux/`, which is automatically added to your `PATH`.
+- You can drop any binaries or executables in there and call them from anywhere inside Termux.
+
+## People
+
+Author: Aravind Potluri <<aravindswami135@gmail.com>>
+
+## LICENSE
+
+[MIT © Aravind Potluri](./LICENSE)
